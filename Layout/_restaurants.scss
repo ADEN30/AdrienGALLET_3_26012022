@@ -1,0 +1,16 @@
+.restaurants
+{
+    background-color: rgba(246,246,246,255);
+    padding: 20px;
+    &_cards{
+        text-align: center;
+    }
+
+    &_titre{
+        font-family: 'Roboto';
+        font-size: 1.3em;
+        padding-top: 25px;
+        font-weight: 900;
+    }
+    
+}
