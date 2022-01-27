@@ -60,7 +60,7 @@
   opacity: 0.7;
 }
 
-.intro_lien {
+.intro_btn {
   display: inline-block;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -74,7 +74,38 @@
   background: linear-gradient(to top, #9356DC, #FF79DA);
 }
 
-.intro_lien:hover {
+.intro_btn--menu {
+  position: relative;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.intro_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
+}
+
+.carte_btn {
+  font-family: 'Roboto';
+  position: relative;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  padding: 15px 50px;
+  color: white;
+  font-size: 1em;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.carte_btn:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
   background: linear-gradient(to top, #f385d6, #FF79DA);
 }
@@ -378,13 +409,19 @@
 .arrière_plan {
   height: 200px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carte {
+  background-color: #f6f6f6;
 }
 
 .menu {
   position: relative;
   top: -44px;
   background-color: #f6f6f6;
-  border-radius: 40px;
+  border-radius: 40px 40px 0px 0px;
   padding: 20px;
 }
 
@@ -615,6 +652,56 @@
           transform: rotate(0turn);
   -webkit-transition: all 500ms 100ms;
   transition: all 500ms 100ms;
+}
+
+.intro_btn {
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 0.8em;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.intro_btn--menu {
+  position: relative;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.intro_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
+}
+
+.carte_btn {
+  font-family: 'Roboto';
+  position: relative;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  padding: 15px 50px;
+  color: white;
+  font-size: 1em;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.carte_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
 }
 
 .footer {

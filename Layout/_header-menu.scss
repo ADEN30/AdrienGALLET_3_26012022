@@ -15,13 +15,16 @@
 {
     height: 200px;
     width: 100%;
+    object-fit: cover;
 }
-
+.carte{
+    background-color: rgba(246,246,246,255);
+}
 .menu{
     position: relative;
     top: -44px;
     background-color: rgba(246,246,246,255);
-    border-radius: 40px;
+    border-radius: 40px 40px 0px 0px;
     padding: 20px;
 
     &_titre{
