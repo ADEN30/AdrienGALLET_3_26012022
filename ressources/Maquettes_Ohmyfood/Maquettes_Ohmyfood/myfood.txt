@@ -1,6 +1,6 @@
 ﻿La palette du goût
 
-Entrées
+boxs
 Fricassée d'escargot
 Au piment d'Espelette 
 25€
@@ -44,7 +44,7 @@ Au piment d'Espelette et à la truffe noire
 
 Le délice des sens
 
-Entrées
+boxs
 Tartare de thon
 Assaisonné au yuzu
 25€
@@ -87,7 +87,7 @@ Tiramisu
 
 La note enchantée
 
-Entrées
+boxs
 Ravioles de foie gras 
 Accompagnés de leur crème à la truffe
 25€
@@ -134,7 +134,7 @@ Déstructurée
 
 À la française
 
-Entrées
+boxs
 Tartare de poulpe acidulé
 Aux zestes d'orange
 25€

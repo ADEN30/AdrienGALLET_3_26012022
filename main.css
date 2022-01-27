@@ -444,11 +444,29 @@
           transform: scale(0);
 }
 
-.entrée {
+@-webkit-keyframes cards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.box {
   padding: 20px 0px;
 }
 
-.entrée_titre {
+.box_titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,16 +479,16 @@
   padding: 0px 10px;
 }
 
-.entrée_titre:after {
+.box_titre:after {
   content: '';
   height: 2px;
   width: 35px;
   position: absolute;
   bottom: -5px;
-  background-color: green;
+  background-color: #99e2d0;
 }
 
-.entrée_conteneur {
+.box_conteneur {
   margin: 20px 0px;
 }
 
@@ -479,107 +497,160 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: relative;
   background-color: white;
   border-radius: 14px;
-  -webkit-box-shadow: 0px 5px 5px gray;
-          box-shadow: 0px 5px 5px gray;
-  padding: 10px;
-}
-
-.conteneur_titre {
-  font-size: 0.9em;
-  margin-bottom: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.conteneur_texte {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 0.75em;
-}
-
-.conteneur .texte {
-  display: block;
-  white-space: nowrap;
+  -webkit-box-shadow: 0px 3px 5px #80808047;
+          box-shadow: 0px 3px 5px #80808047;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.conteneur_1 {
+  -webkit-animation-name: cards;
+          animation-name: cards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.conteneur_2 {
+  -webkit-animation-name: cards;
+          animation-name: cards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.conteneur_3 {
+  -webkit-animation-name: cards;
+          animation-name: cards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.conteneur:hover > .conteneur_items--check {
+  margin-right: 0em;
+}
+
+.conteneur:hover > .conteneur_items--check > .fa-check-circle {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+}
+
+.conteneur_description {
+  padding: 10px 0px 10px 10px;
+  overflow: hidden;
+}
+
+.conteneur_description--titre {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
-  width: 100%;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
 }
 
-.conteneur .prix {
-  font-weight: 900;
-  display: block;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
+.conteneur_description--texte {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.conteneur .check {
+.conteneur_items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: greenyellow;
-  border-radius: 20px;
-  opacity: 0;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-  height: 100%;
-  width: 10%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: auto;
+}
+
+.conteneur_items--prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 10px;
+  font-weight: 900;
+}
+
+.conteneur_items--check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.conteneur .fas {
-  -webkit-transform: rotate(1turn);
-          transform: rotate(1turn);
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-
-.conteneur:hover > .check {
-  opacity: 1;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  margin-left: 20px;
+  background-color: #99e2d0;
   border-radius: 0px 13px 13px 0px;
+  margin-right: -4em;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  cursor: pointer;
 }
 
-.conteneur:hover > .check > .fas {
+.fa-check-circle::before {
+  color: white;
+}
+
+.fa-check-circle {
+  font-size: 1.3em;
   -webkit-transform: rotate(0turn);
           transform: rotate(0turn);
+  -webkit-transition: all 500ms 100ms;
+  transition: all 500ms 100ms;
 }
 
-.conteneur:hover > .conteneur_texte > .prix {
-  -webkit-transform: translateX(-280%);
-          transform: translateX(-280%);
+.footer {
+  font-family: 'Roboto';
+  background-color: #353535;
+  padding: 20px 20px;
 }
 
-.conteneur:hover > .conteneur_texte > .texte {
-  width: 70%;
+.footer p {
+  font-family: 'Shrikhand';
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer_liens--restaurant, .footer_liens--partenaire, .footer_liens--légales, .footer_liens--contact {
+  display: block;
+  margin: 5px 0px;
+  color: white;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.footer_liens .fa-utensils::before {
+  color: white;
+  font-size: 0.7em;
+  margin-right: 12px;
+}
+
+.footer_liens .fa-hands-helping::before {
+  color: white;
+  font-size: 0.6em;
+  margin-right: 10px;
+}
+
+.footer_liens--légales, .footer_liens--contact {
+  opacity: 0.7;
 }
 /*# sourceMappingURL=main.css.map */
