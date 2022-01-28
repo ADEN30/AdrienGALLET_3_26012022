@@ -8,6 +8,24 @@
   color: black;
 }
 
+@-webkit-keyframes cards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Accueil */
 .header {
   display: -webkit-box;
@@ -355,43 +373,6 @@
   border-radius: 3px;
 }
 
-.footer {
-  font-family: 'Roboto';
-  background-color: #353535;
-  padding: 20px 20px;
-}
-
-.footer p {
-  font-family: 'Shrikhand';
-  font-size: 1em;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.footer_liens--restaurant, .footer_liens--partenaire, .footer_liens--légales, .footer_liens--contact {
-  display: block;
-  margin: 5px 0px;
-  color: white;
-  font-size: 0.9em;
-  opacity: 0.9;
-}
-
-.footer_liens .fa-utensils::before {
-  color: white;
-  font-size: 0.7em;
-  margin-right: 12px;
-}
-
-.footer_liens .fa-hands-helping::before {
-  color: white;
-  font-size: 0.6em;
-  margin-right: 10px;
-}
-
-.footer_liens--légales, .footer_liens--contact {
-  opacity: 0.7;
-}
-
 .header {
   position: relative;
 }
@@ -479,24 +460,6 @@
 .menu_titre .lien-coeur:hover > .far {
   -webkit-transform: scale(0);
           transform: scale(0);
-}
-
-@-webkit-keyframes cards {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes cards {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .box {
@@ -652,56 +615,6 @@
           transform: rotate(0turn);
   -webkit-transition: all 500ms 100ms;
   transition: all 500ms 100ms;
-}
-
-.intro_btn {
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  text-align: center;
-  border-radius: 25px;
-  padding: 15px 20px;
-  color: white;
-  font-size: 0.8em;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-}
-
-.intro_btn--menu {
-  position: relative;
-  right: -50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.intro_btn:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
-  background: linear-gradient(to top, #f385d6, #FF79DA);
-}
-
-.carte_btn {
-  font-family: 'Roboto';
-  position: relative;
-  right: -50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  text-align: center;
-  border-radius: 25px;
-  padding: 15px 50px;
-  color: white;
-  font-size: 1em;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-}
-
-.carte_btn:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
-  background: linear-gradient(to top, #f385d6, #FF79DA);
 }
 
 .footer {
