@@ -8,26 +8,15 @@
   color: black;
 }
 
-@-webkit-keyframes cards {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes cards {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Accueil */
+/* Générale */
+/* Accueil*/
+/* Operation */
+/* Localisation */
+/* cards */
+/* Menu */
+/*  variables et listes */
 .header {
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,10 +36,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 20px 10px 0px;
+  padding: 10px 0px;
   background: -webkit-gradient(linear, left top, left bottom, from(#cecece), color-stop(15%, #eaeaea));
   background: linear-gradient(to bottom, #cecece, #eaeaea 15%);
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 0.8em;
   font-weight: 400;
 }
@@ -78,59 +67,23 @@
   opacity: 0.7;
 }
 
-.intro_btn {
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  text-align: center;
-  border-radius: 25px;
-  padding: 15px 20px;
-  color: white;
-  font-size: 0.8em;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-}
-
-.intro_btn--menu {
-  position: relative;
-  right: -50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.intro_btn:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
-  background: linear-gradient(to top, #f385d6, #FF79DA);
-}
-
-.carte_btn {
-  font-family: 'Roboto';
-  position: relative;
-  right: -50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  text-align: center;
-  border-radius: 25px;
-  padding: 15px 50px;
-  color: white;
-  font-size: 1em;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-}
-
-.carte_btn:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
-  background: linear-gradient(to top, #f385d6, #FF79DA);
-}
-
+/* Générale */
+/* Accueil*/
+/* Operation */
+/* Localisation */
+/* cards */
+/* Menu */
+/*  variables et listes */
+/* Générale */
+/* Accueil*/
+/* Operation */
+/* Localisation */
+/* cards */
+/* Menu */
+/*  variables et listes */
 .fonctionnement {
   padding: 40px 20px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .fonctionnement_titre {
@@ -145,6 +98,7 @@
 }
 
 .fonctionnement_étape {
+  z-index: 1;
   font-size: 0.8em;
   font-weight: 700;
   display: -webkit-box;
@@ -166,11 +120,11 @@
   background-color: #f5edff;
 }
 
-.fonctionnement_étape:hover + .fas::before {
+.fonctionnement_étape:hover > .fas::before {
   color: #9356dc;
 }
 
-.fonctionnement_étape:hover + .fas {
+.fonctionnement_étape:hover > .fas {
   display: initial;
   opacity: 1;
 }
@@ -196,6 +150,7 @@
 
 .fonctionnement_étape--deux::before {
   content: "2";
+  position: absolute;
   position: absolute;
   text-align: center;
   padding: 4px 7px 1px 7px;
@@ -224,31 +179,79 @@
   opacity: 0.9;
 }
 
-.telephonne--violet {
-  position: absolute;
-  top: 18px;
-  left: 40px;
-  opacity: 0.5;
+.intro_btn {
+  font-family: 'Roboto';
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.8em;
+  z-index: 1;
+  padding: 15px 20px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.intro_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
+}
+
+.carte_btn {
+  font-family: 'Roboto';
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.8em;
+  z-index: 1;
+  position: relative;
+  padding: 15px 60px;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 1em;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.carte_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
+}
+
+.telephonne {
+  position: absolute;
+  top: 19px;
+  opacity: 0.5;
+  left: 38px;
+  font-size: 1.3em;
 }
 
 .liste {
   position: absolute;
-  left: 38px;
-  top: 95px;
+  top: 19px;
   opacity: 0.5;
-  font-size: 1em;
+  left: 35px;
+  font-size: 1.2em;
 }
 
 .market {
   position: absolute;
-  left: 38px;
-  top: 170px;
+  top: 19px;
   opacity: 0.5;
-  font-size: 0.9em;
+  left: 35px;
+  font-size: 1.2em;
 }
 
 .restaurants {
+  z-index: 1;
   background-color: #f6f6f6;
   padding: 20px;
 }
@@ -264,7 +267,6 @@
   font-weight: 900;
 }
 
-/* Accueil */
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,7 +283,7 @@
 
 .card img {
   border-radius: 15px 15px 0px 0px;
-  height: 140px;
+  height: 180px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -305,59 +307,18 @@
 .card_texte h3 {
   font-size: 1em;
   font-weight: 900;
-  /*  font-weight:600;
-                text-shadows: 0px 0px 1px black; */
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .card_texte p {
   font-size: 0.95em;
   padding: 3px 0px 5px 0px;
   opacity: 0.9;
-}
-
-.card .far {
-  position: absolute;
-  font-size: 1.4em;
-  right: 10px;
-  bottom: 25px;
-  opacity: 0.4;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 400ms 300ms;
-  transition: all 400ms 300ms;
-}
-
-.card .fas {
-  position: absolute;
-  font-size: 1.4em;
-  right: 10px;
-  bottom: 25px;
-  opacity: 1;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
-}
-
-.card .fas::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  padding: 1px;
-}
-
-.card .lien-coeur:hover > .fas {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.card .lien-coeur:hover > .far {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .card_étiquette {
@@ -373,6 +334,130 @@
   border-radius: 3px;
 }
 
+.card .far {
+  position: absolute;
+  font-size: 1.4em;
+  right: 10px;
+  bottom: 25px;
+  padding-left: 1px;
+}
+
+.card .fas {
+  position: absolute;
+  font-size: 1.4em;
+  right: 10px;
+  bottom: 25px;
+  padding-left: 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.card .lien-coeur:hover > .fas {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card .lien-coeur:hover > .far {
+  -webkit-animation-name: coeur;
+          animation-name: coeur;
+  -webkit-animation-delay: 270ms;
+          animation-delay: 270ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.spinner {
+  position: fixed;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  -webkit-animation-name: background-spin;
+          animation-name: background-spin;
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  visibility: hidden;
+}
+
+.spinner::after {
+  content: "";
+  position: absolute;
+  right: 48%;
+  height: 50px;
+  top: 50%;
+  width: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.185);
+  border-radius: 50%;
+  border-top-color: white;
+  border-bottom: 3px solid white;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+.footer {
+  z-index: 1;
+  font-family: 'Roboto';
+  background-color: #353535;
+  padding: 20px 20px;
+}
+
+.footer p {
+  font-family: 'Shrikhand';
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer_liens--restaurant, .footer_liens--partenaire, .footer_liens--légales, .footer_liens--contact {
+  display: block;
+  margin: 5px 0px;
+  color: white;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.footer_liens .fa-utensils::before {
+  color: white;
+  font-size: 0.7em;
+  margin-right: 12px;
+}
+
+.footer_liens .fa-hands-helping::before {
+  color: white;
+  font-size: 0.6em;
+  margin-right: 10px;
+}
+
+.footer_liens--légales, .footer_liens--contact {
+  opacity: 0.7;
+}
+
+*, ::before, ::after {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   position: relative;
 }
@@ -383,8 +468,8 @@
   left: 22px;
 }
 
-.header .fas {
-  font-size: 1.2em;
+.header .fa-arrow-left {
+  font-size: 1.4em;
 }
 
 .arrière_plan {
@@ -410,56 +495,204 @@
   font-family: 'Shrikhand';
 }
 
-.menu_titre--française {
+.menu_titre--h1 {
   padding: 0px 10px;
   font-size: 1.4em;
   font-weight: 400;
 }
 
-.menu_titre .far {
-  font-size: 1.3em;
-  position: absolute;
-  top: 27px;
-  right: 40px;
-  opacity: 0.5;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all  300ms 500ms;
-  transition: all  300ms 500ms;
-  z-index: 1;
-}
-
-.menu_titre .fas {
+.menu .fa-heart {
   font-size: 1.4em;
   position: absolute;
-  top: 26px;
-  right: 39px;
-  opacity: 1;
+  top: 27px;
+  right: 25px;
+  padding-left: 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform  300ms;
   transition: -webkit-transform  300ms;
   transition: transform  300ms;
   transition: transform  300ms, -webkit-transform  300ms;
-  z-index: 2;
 }
 
-.menu_titre .fas::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+.menu .far {
+  font-size: 1.4em;
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  padding-left: 1px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
+  background: linear-gradient(to bottom, #000000, #000000);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  padding: 0px 0px;
+  -webkit-transition: all  300ms 500ms;
+  transition: all  300ms 500ms;
 }
 
-.menu_titre .lien-coeur:hover > .fas {
+.menu .lien-coeur:hover > .fa-heart {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.menu_titre .lien-coeur:hover > .far {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+.menu .lien-coeur:hover > .far {
+  -webkit-animation-name: coeur;
+          animation-name: coeur;
+  -webkit-animation-delay: 270ms;
+          animation-delay: 270ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* Acceuil */
+@-webkit-keyframes coeur {
+  0% {
+    color: black;
+    opacity: 1;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+@keyframes coeur {
+  0% {
+    color: black;
+    opacity: 1;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+@-webkit-keyframes background-spin {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  95%, 100% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes background-spin {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  95%, 100% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+/* Menu */
+@-webkit-keyframes cards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Générale */
+/* Accueil*/
+/* Operation */
+/* Localisation */
+/* cards */
+/* Menu */
+/*  variables et listes */
+.intro_btn {
+  font-family: 'Roboto';
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.8em;
+  z-index: 1;
+  padding: 15px 20px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.intro_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
+}
+
+.carte_btn {
+  font-family: 'Roboto';
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.8em;
+  z-index: 1;
+  position: relative;
+  padding: 15px 60px;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1em;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.carte_btn:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  background: linear-gradient(to top, #f385d6, #FF79DA);
 }
 
 .box {
@@ -544,8 +777,8 @@
 }
 
 .conteneur:hover > .conteneur_items--check > .fa-check-circle {
-  -webkit-transform: rotate(1turn);
-          transform: rotate(1turn);
+  -webkit-transform: rotate(0turn);
+          transform: rotate(0turn);
 }
 
 .conteneur_description {
@@ -596,6 +829,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: 60px;
+  min-width: 60px;
   margin-left: 20px;
   background-color: #99e2d0;
   border-radius: 0px 13px 13px 0px;
@@ -605,19 +839,20 @@
   cursor: pointer;
 }
 
-.fa-check-circle::before {
-  color: white;
-}
-
-.fa-check-circle {
+.conteneur .fa-check-circle {
   font-size: 1.3em;
-  -webkit-transform: rotate(0turn);
-          transform: rotate(0turn);
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
   -webkit-transition: all 500ms 100ms;
   transition: all 500ms 100ms;
 }
 
+.conteneur .fa-check-circle::before {
+  color: white;
+}
+
 .footer {
+  z-index: 1;
   font-family: 'Roboto';
   background-color: #353535;
   padding: 20px 20px;

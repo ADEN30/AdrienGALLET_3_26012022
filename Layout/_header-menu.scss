@@ -7,68 +7,59 @@
         left: 22px;
     }
 
-    .fas {
-        font-size: 1.2em;
+    .fa-arrow-left {
+        font-size: $heart-size;
     }
 }
 .arrière_plan
 {
-    height: 200px;
+    height: $picture-size;
     width: 100%;
     object-fit: cover;
 }
 .carte{
-    background-color: rgba(246,246,246,255);
+    background-color: $background-color-menu;
 }
 .menu{
     position: relative;
     top: -44px;
-    background-color: rgba(246,246,246,255);
+    background-color: $background-color-menu;
     border-radius: 40px 40px 0px 0px;
     padding: 20px;
 
     &_titre{
+
         font-family: 'Shrikhand';
-        &--française{
+
+        &--h1{
             padding: 0px 10px;
-            font-size: 1.4em;
+            font-size: $h1-size;
             font-weight: 400;
         }
         
-        .far {
-            font-size: 1.3em;
-            position: absolute;
-            top: 27px;
-            right: 40px;
-            opacity: 0.5;
-            transform: scale(1);
-            transition: all  300ms 500ms;
-            z-index: 1;
-        }
-        .fas{
-            font-size: 1.4em;
-            position: absolute;
-            top: 26px;
-            right: 39px;
-            opacity: 1;
-            transform: scale(0);
-            transition: transform  300ms;
-            z-index: 2;
-        }
-        .fas::before{
-            background: linear-gradient(to bottom,#9356DC  ,#FF79DA  ) ;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            padding: 0px 0px;
-        }
-        .lien-coeur:hover > .fas
-        {
-            transform: scale(1);
-        }
-        .lien-coeur:hover > .far
-        {
-            transform: scale(0);
-        }
     }
-    
+    .fa-heart{
+        @include heart(nth($page, 2));
+        @include heart-color(violet);
+        transform: scale(0);
+        transition: transform  300ms;
+    }
+    .far{
+        @include heart(nth($page, 2));
+        transform: scale(1);
+        @include heart-color(black);
+        transition: all  300ms 500ms;
+
+        
+    }
+    .lien-coeur:hover > .fa-heart
+    {
+        transform: scale(1);
+    }
+    .lien-coeur:hover > .far
+    {
+        animation-name: coeur;
+        animation-delay: 270ms;
+        animation-fill-mode: forwards;
+    }
 }

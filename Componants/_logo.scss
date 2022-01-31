@@ -1,23 +1,11 @@
-.telephonne--violet{
-    position: absolute;
-    top: 18px;
-    left: 40px;
-    opacity: 0.5;
-    font-size: 1em;
+.telephonne{
+   @include logo('telephonne');
 }
 
 .liste{
-    position: absolute;
-    left: 38px;
-    top: 95px;
-    opacity: 0.5;
-    font-size: 1em;
+    @include logo('liste');
 }
 
 .market{
-    position: absolute;
-    left: 38px;
-    top: 170px;
-    opacity: 0.5;
-    font-size: 0.9em;
+    @include logo('market');
 }

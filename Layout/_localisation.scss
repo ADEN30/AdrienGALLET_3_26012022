@@ -1,10 +1,11 @@
+
 .Localisation {
     display: flex;
     justify-content: center;
-    padding: 10px 20px 10px 0px;
-    background: linear-gradient(to bottom, #cecece, #eaeaea 15%);
-    font-family: 'Roboto';
-    font-size: 0.8em;
+    padding: 10px 0px;
+    background: map-get( $gradient, localisation);
+    font-family: map-get($polices, roboto);
+    font-size: nth($localisation-size, 1);
     font-weight: 400;
     i {
         padding-right: 10px;

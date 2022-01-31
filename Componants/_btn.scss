@@ -1,43 +1,20 @@
 .intro {
 
     &_btn{
-        display: inline-block;
-        width: max-content;
-        text-align: center;
-        border-radius: 25px;
-        padding: 15px 20px;
-        color: white;
-        font-size: 0.8em;
-        background: linear-gradient(to top,#9356DC ,#FF79DA ) ;
-        &--menu{
-            position: relative;
-            right: -50%;
-            transform: translateX(-50%);
+        @include btn(0);
+        &:hover{
+            background: map-get($gradient, btn-press);
         }
     }
-        &_btn:hover{
-            background: linear-gradient(to top,#f385d6 ,#FF79DA );
-        }
 }
 
 .carte{   
     &_btn{
-        font-family: 'Roboto';
-        position: relative;
-        right: -50%;
-        transform: translateX(-50%);
-        display: inline-block;
-        width: max-content;
-        text-align: center;
-        border-radius: 25px;
-        padding: 15px 50px;
-        color: white;
-        font-size: 1em;
-        background: linear-gradient(to top,#9356DC ,#FF79DA ) ;
-}
-&_btn:hover{
-            background: linear-gradient(to top,#f385d6 ,#FF79DA );
+        @include btn(1);
+        
+        &:hover{
+            background: map-get($gradient, btn-press);
         }
-    
+    }
 }
 

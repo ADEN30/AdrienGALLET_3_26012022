@@ -1,0 +1,89 @@
+@import "./_variables";
+
+@mixin Accueil-num {
+
+    position: absolute;
+    text-align: center;
+    padding: 4px 7px 1px 7px;
+    font-size: $number-size;
+    font-weight: 400;
+    border-radius: 60px;
+    left: -8px;
+    top: 18px;
+    color: white;
+    background-color: rgba(147,86,220,255);
+    opacity: 0.9;
+    
+}
+@mixin operation-btn{
+    font-family: 'Roboto';
+    display: inline-block;
+    width: max-content;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    font-size: 0.8em;
+    z-index: 1;
+}
+
+@mixin btn ($padd-width){
+    @if ($padd-width == 0){
+        @include operation-btn;
+        padding: 15px 20px;
+    }
+    @else{
+        @include operation-btn;
+        position: relative;
+        padding: 15px 60px;
+        right: -50%;
+        transform: translateX(-50%);
+        font-size: 1em;
+        
+    }
+    background: map-get($gradient, btn);
+}
+
+@mixin heart-color($couleur){
+    @if($couleur== violet)
+    {
+        background: linear-gradient(to bottom,#9356DC  ,#FF79DA  ) ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    @else{
+        background: linear-gradient(to bottom,#000000  ,#000000  ) ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+@mixin heart ($page) {
+    @if ($page == 'accueil'){
+        position: absolute;
+        font-size: $heart-size;
+        right: 10px;
+        bottom: 25px;
+    }
+    @else {
+        font-size: $heart-size;
+        position: absolute;
+        top: 27px;
+        right: 25px;
+    }
+    padding-left: 1px;
+}
+
+@mixin logo($logo) {
+    position: absolute;
+    top: 19px;
+    opacity: 0.5;
+    
+    @if ($logo=='telephonne'){
+        left: 38px;
+        font-size: 1.3em;
+    }
+    @else{
+        left: 35px;
+        font-size: 1.2em;
+    }
+    
+}

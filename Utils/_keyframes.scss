@@ -1,3 +1,45 @@
+/* Acceuil */
+
+@keyframes coeur{
+    0%{
+        color: black;
+        opacity: 1;
+    }
+    100%{
+        @include heart-color(violet);
+    }
+}
+
+
+
+@keyframes background-spin{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    95%,100%{
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0turn);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+    
+}
+
+
+
+
+
+/* Menu */
 @keyframes cards{
     0%{
         opacity: 0;

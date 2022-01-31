@@ -1,3 +1,38 @@
 
-/* Accueil */
-$pictures-size:120px;
+
+
+
+
+/* Générale */
+$polices:(roboto: 'Roboto', shrikand: 'Shrikand');
+$gradient:(btn: linear-gradient(to top,#9356DC ,#FF79DA ),btn-press:linear-gradient(to top,#f385d6 ,#FF79DA ), localisation: linear-gradient(to bottom, #cecece, #eaeaea 15%));
+$heart-size: 1.4em;
+
+                                        /* Accueil*/
+
+/* Operation */
+$title-size: 1.2em 1.3em;
+$stage-size: 0.8em;
+$number-size: 0.9em;
+$localisation-size: 0.8em;
+$padd-operation-num: 4px 7px 1px 7px;
+
+/* Localisation */
+
+
+/* cards */
+$p: 0.95em;
+$h3: 1em;
+$etiquette: 0.7em;
+$width-image-accueil: 180px;
+
+
+
+                                        /* Menu */
+
+/*  variables et listes */
+$width-image-menu: 200px;
+$page: 'accueil' 'menu';
+$background-color-menu: rgba(246,246,246,255);
+$h1-size: 1.4em;
+$picture-size: 200px;
