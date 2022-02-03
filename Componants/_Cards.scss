@@ -2,18 +2,44 @@
 
 .card
 {
+    background-color: white;
+    width: 45%;
     display: flex;
     position: relative;
-    flex-direction: column;
     margin: 20px 0px;
     transform: scale(1);
-    img 
-    {
+    flex-direction: column;
+    border-radius: 15px 15px 15px 15px;
+    @media  all and(max-width: nth($max-width, 6)) {
+    width: auto;
+
+    }
+    img {
         border-radius: 15px 15px 0px 0px;
-        height: $width-image-accueil;
-        width: 100%;
         object-fit: cover;
         object-position: center bottom;
+        width: 100%;
+        height: nth($width-image-accueil, 7);
+        @media all and(max-width: nth($max-width, 6)) {
+            height: nth($width-image-accueil, 6);
+        }
+        @media all and(max-width: nth($max-width, 5)) {
+            height: nth($width-image-accueil, 5);
+        }
+        @media all and(max-width: nth($max-width, 4)) {
+            height: nth($width-image-accueil, 4);
+        }
+        @media all and(max-width: nth($max-width, 3)) {
+            height: nth($width-image-accueil, 3);
+        }
+        @media all and(max-width: nth($max-width, 2)) {
+            height: nth($width-image-accueil, 2);
+        }
+        @media all and(max-width: nth($max-width, 1)) {
+            height: nth($width-image-accueil, 1);
+        }
+            
+        
     }
     #Charonne{
         object-position: center 61%;

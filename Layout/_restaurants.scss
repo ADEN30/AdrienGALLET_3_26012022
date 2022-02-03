@@ -1,17 +1,36 @@
 .restaurants
 {
-    z-index: 1;
     background-color: rgba(246,246,246,255);
     padding: 20px;
     &_cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         text-align: center;
+        width: 700px;
+        margin: 0% auto;
+        @media all and (max-width: nth($max-width, 7)){
+            margin: 0;
+            width: auto;
+        }
+        @media all and (max-width: nth($max-width, 6)){
+            flex-direction: column;
+        }
     }
 
     &_titre{
-        font-family: 'Roboto';
-        font-size: 1.3em;
+        font-family: map-get($polices, roboto);
+        font-size: nth($title-size-restaurants, 1);
         padding-top: 25px;
         font-weight: 900;
+        width: 700px;
+        margin: 0px auto;
+        
+        @media all and (max-width: nth($max-width, 7)){
+            margin: 0;
+            width: auto;
+        }
+        
     }
     
 }

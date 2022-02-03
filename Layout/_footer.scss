@@ -1,30 +1,48 @@
 .footer{
     z-index: 1;
-    font-family: 'Roboto';
+    font-family: map-get($polices, roboto);
     background-color: rgba(53,53,53,255);
     padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    @media all and(max-width: nth($max-width, 6)){
+        display: block;
+    }
     p{
-        font-family: 'Shrikhand';
-        font-size: 1em;
+        text-align: center;
+        font-family: map-get($polices, shrikhand);
+        font-size: $title-size-footer;
         margin-bottom: 10px;
         color: white;
+        @media all and(max-width: nth($max-width, 6)){
+            text-align: left;
+            width: max-content;
+        }
     }
     &_liens {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        @media all and (max-width: nth($max-width, 6)){
+            display: block;
+        }
        &--restaurant, &--partenaire, &--légales, &--contact {
             display: block;
             margin: 5px 0px;
             color: white;
-            font-size: 0.9em;
+            font-size: $texte-size-footer;
             opacity: 0.9;
         }
         .fa-utensils::before {
             color: white;
-            font-size: 0.7em;
+            font-size: $food-size-footer;
             margin-right: 12px;
         }
         .fa-hands-helping::before{
             color: white;
-            font-size: 0.6em;
+            font-size: $help-size-footer;
             margin-right: 10px;
         }
         &--légales, &--contact{

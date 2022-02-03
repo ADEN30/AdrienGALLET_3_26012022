@@ -4,14 +4,14 @@
 
     position: absolute;
     text-align: center;
-    padding: 4px 7px 1px 7px;
+    padding: $padd-operation-num;
     font-size: $number-size;
     font-weight: 400;
     border-radius: 60px;
     left: -8px;
     top: 18px;
     color: white;
-    background-color: rgba(147,86,220,255);
+    background-color: $number-violet;
     opacity: 0.9;
     
 }
@@ -46,7 +46,7 @@
 @mixin heart-color($couleur){
     @if($couleur== violet)
     {
-        background: linear-gradient(to bottom,#9356DC  ,#FF79DA  ) ;
+        background: linear-gradient(to bottom,#9356DC  ,#FF79DA ) ;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
@@ -74,16 +74,22 @@
 
 @mixin logo($logo) {
     position: absolute;
-    top: 19px;
+    top: 21px;
     opacity: 0.5;
     
     @if ($logo=='telephonne'){
-        left: 38px;
+        left: 11.8%;
         font-size: 1.3em;
     }
     @else{
-        left: 35px;
+        left: 11.3%;
         font-size: 1.2em;
     }
     
+}
+
+@mixin text-wrap{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

@@ -1,18 +1,20 @@
 .box{
     padding: 20px 0px;
+
     &_titre{
         display: flex;
         position: relative;
-        font-family: 'Roboto';
+        font-family: map-get($polices, roboto);
         font-weight: 400;
-        font-size: 0.9em;
+        font-size: $title-size-box;
         opacity: 0.9;
         text-transform: uppercase;
         padding: 0px 10px;
+
         &:after{
             content: '';
             height: 2px;
-            width: 35px;
+            width: $line-width-box;
             position: absolute;
             bottom: -5px;
             background-color: rgba(153,226,208,255);
@@ -21,11 +23,36 @@
     
     &_conteneur{
         margin: 20px 0px;
+
+        &--1{
+        animation-name: cards;
+        animation-duration: 2s;
+        animation-delay: 300ms;
+        animation-fill-mode: both;
+        }
+        &--2{
+            animation-name: cards;
+            animation-duration: 2s;
+            animation-delay: 600ms;
+            animation-fill-mode: both;
+        }
+        &--3{
+            animation-name: cards;
+            animation-duration: 2s;
+            animation-delay: 800ms;
+            animation-fill-mode: both;
+        }
+        &--4{
+            animation-name: cards;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+        }
     }
 }
 
 .conteneur{
-    font-family: 'Roboto';
+    font-family: map-get($polices, roboto);
     display: flex;
     position: relative;
     background-color: white;
@@ -34,29 +61,12 @@
     overflow: hidden;
     cursor: pointer;
 
-    &_1{
-        animation-name: cards;
-        animation-duration: 2s;
-        animation-delay: 300ms;
-        animation-fill-mode: both;
-    }
-    &_2{
-        animation-name: cards;
-        animation-duration: 2s;
-        animation-delay: 600ms;
-        animation-fill-mode: both;
-    }
-    &_3{
-        animation-name: cards;
-        animation-duration: 2s;
-        animation-delay: 800ms;
-        animation-fill-mode: both;
-    }
+    
 
-    &:hover > .conteneur_items--check{
+    &:hover > .conteneur_items >.conteneur_items--check{
         margin-right: 0em;
     }
-    &:hover > .conteneur_items--check > .fa-check-circle 
+    &:hover > .conteneur_items >.conteneur_items--check > .fa-check-circle 
     {
         transform: rotate(0turn);
     }
@@ -67,14 +77,10 @@
         &--titre{
         font-size: 1.2em;
         margin-bottom: 5px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include text-wrap;
         }
         &--texte{
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            @include text-wrap;
         }
     }
     &_items{

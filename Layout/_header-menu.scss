@@ -1,6 +1,6 @@
 .header{
     position: relative;
-
+    background-color: white;
     &_btn-retour{
         position: absolute;
         top: 22px; 
@@ -18,12 +18,12 @@
     object-fit: cover;
 }
 .carte{
-    background-color: $background-color-menu;
+    background-color: $background-color-beige;
 }
 .menu{
     position: relative;
     top: -44px;
-    background-color: $background-color-menu;
+    background-color: $background-color-beige;
     border-radius: 40px 40px 0px 0px;
     padding: 20px;
 
@@ -32,9 +32,12 @@
         font-family: 'Shrikhand';
 
         &--h1{
+            
             padding: 0px 10px;
             font-size: $h1-size;
             font-weight: 400;
+            
+            
         }
         
     }

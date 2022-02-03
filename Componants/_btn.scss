@@ -2,6 +2,10 @@
 
     &_btn{
         @include btn(0);
+        @media all and (max-width: 320px){
+            padding: 10px 0px;
+            width: 40%;
+        }
         &:hover{
             background: map-get($gradient, btn-press);
         }
@@ -11,6 +15,10 @@
 .carte{   
     &_btn{
         @include btn(1);
+        @media all and (max-width: 320px){
+            padding: 10px 0px;
+            width: 60%;
+        }
         
         &:hover{
             background: map-get($gradient, btn-press);

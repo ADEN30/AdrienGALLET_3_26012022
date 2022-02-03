@@ -1,10 +1,10 @@
 .header{
-    z-index: 1;
+    
     display: flex;
     &_image{
         display: block;
         margin: auto;
-        width: 130px;
+        width: $logo-width;
         padding: 20px 0px;
     }
     
