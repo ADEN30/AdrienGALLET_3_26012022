@@ -2,8 +2,7 @@
 *, ::before, ::after {
   margin: 0px;
   padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   color: black;
 }
@@ -31,44 +30,17 @@
 /*  Variables et listes */
 /* box */
 /* Acceuil */
-@-webkit-keyframes coeur {
-  0% {
-    color: black;
-    opacity: 1;
-  }
-  100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    background: linear-gradient(to bottom, #9356DC, #FF79DA);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-}
 @keyframes coeur {
   0% {
     color: black;
     opacity: 1;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     background: linear-gradient(to bottom, #9356DC, #FF79DA);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
 }
-
-@-webkit-keyframes background-spin {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  95%, 100% {
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
 @keyframes background-spin {
   0% {
     visibility: visible;
@@ -81,38 +53,15 @@
     visibility: hidden;
   }
 }
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  100% {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
+    transform: rotate(0turn);
   }
   100% {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
-
 /* Menu */
-@-webkit-keyframes cards {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes cards {
   0% {
     opacity: 0;
@@ -121,12 +70,9 @@
     opacity: 1;
   }
 }
-
 .intro_btn {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   text-align: center;
   border-radius: 25px;
@@ -134,27 +80,22 @@
   font-size: 0.8em;
   z-index: 1;
   padding: 15px 20px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top, #9356DC, #FF79DA);
 }
-
 @media all and (max-width: 320px) {
   .intro_btn {
     padding: 10px 0px;
     width: 40%;
   }
 }
-
 .intro_btn:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  box-shadow: 0px 0px 5px #00000094;
   background: linear-gradient(to top, #f385d6, #FF79DA);
 }
 
 .carte_btn {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   text-align: center;
   border-radius: 25px;
@@ -164,22 +105,18 @@
   position: relative;
   padding: 15px 60px;
   right: -50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 1em;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top, #9356DC, #FF79DA);
 }
-
 @media all and (max-width: 320px) {
   .carte_btn {
     padding: 10px 0px;
     width: 60%;
   }
 }
-
 .carte_btn:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f385d6), to(#FF79DA));
+  box-shadow: 0px 0px 5px #00000094;
   background: linear-gradient(to top, #f385d6, #FF79DA);
 }
 
@@ -188,23 +125,15 @@
   font-family: Roboto;
   background-color: #353535;
   padding: 20px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
 @media all and (max-width: 800px) {
   .footer {
     display: block;
   }
 }
-
 .footer p {
   text-align: center;
   font-family: Shrikhand;
@@ -212,32 +141,22 @@
   margin-bottom: 10px;
   color: white;
 }
-
 @media all and (max-width: 800px) {
   .footer p {
     text-align: left;
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 }
-
 .footer_liens {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 80%;
 }
-
 @media all and (max-width: 800px) {
   .footer_liens {
     display: block;
   }
 }
-
 .footer_liens--restaurant, .footer_liens--partenaire, .footer_liens--légales, .footer_liens--contact {
   display: block;
   margin: 5px 0px;
@@ -245,29 +164,23 @@
   font-size: 0.9em;
   opacity: 0.9;
 }
-
 .footer_liens .fa-utensils::before {
   color: white;
   font-size: 0.7em;
   margin-right: 12px;
 }
-
 .footer_liens .fa-hands-helping::before {
   color: white;
   font-size: 0.6em;
   margin-right: 10px;
 }
-
 .footer_liens--légales, .footer_liens--contact {
   opacity: 0.7;
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header_image {
   display: block;
   margin: auto;
@@ -276,20 +189,14 @@
 }
 
 .Localisation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 10px 0px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#cecece), color-stop(15%, #eaeaea));
   background: linear-gradient(to bottom, #cecece, #eaeaea 15%);
   font-family: Roboto;
   font-size: 0.8em;
   font-weight: 400;
 }
-
 .Localisation i {
   padding-right: 10px;
 }
@@ -300,13 +207,11 @@
   background-color: #f6f6f6;
   font-family: Roboto;
 }
-
 .intro_titre {
   font-size: 1.3em;
   padding: 0px 30px;
   font-weight: 700;
 }
-
 .intro_paragraphe {
   font-size: 1em;
   margin: 20px 0px;
@@ -317,80 +222,55 @@
   padding: 40px 20px;
   font-family: Roboto;
 }
-
 .fonctionnement_titre {
   font-size: 1.2em;
   padding-bottom: 10px;
   font-weight: 900;
 }
-
 .fonctionnement_liste {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   padding: 0px 0px 0px 9px;
 }
-
 @media all and (max-width: 900px) {
   .fonctionnement_liste {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 .fonctionnement_étape {
   width: 30%;
   z-index: 1;
   font-size: 0.8em;
   font-weight: 700;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   margin: 20px 0px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: #f6f6f6;
   border-radius: 20px;
   padding: 20px;
-  -webkit-box-shadow: 0px 5px 10px #0000001f;
-          box-shadow: 0px 5px 10px #0000001f;
+  box-shadow: 0px 5px 10px #0000001f;
 }
-
 @media all and (max-width: 900px) {
   .fonctionnement_étape {
     width: auto;
   }
 }
-
 .fonctionnement_étape:hover {
   background-color: #f5edff;
 }
-
 .fonctionnement_étape:hover > .fas::before {
   color: #9356dc;
 }
-
 .fonctionnement_étape:hover > .fas {
   display: initial;
   opacity: 1;
 }
-
 .fonctionnement_étape--un {
   padding-left: 30px;
 }
-
 .fonctionnement_étape--un::before {
   content: "1";
   position: absolute;
@@ -405,7 +285,6 @@
   background-color: #9356dc;
   opacity: 0.9;
 }
-
 .fonctionnement_étape--deux::before {
   content: "2";
   position: absolute;
@@ -421,7 +300,6 @@
   background-color: #9356dc;
   opacity: 0.9;
 }
-
 .fonctionnement_étape--trois::before {
   content: "3";
   position: absolute;
@@ -465,37 +343,25 @@
   background-color: #f6f6f6;
   padding: 20px;
 }
-
 .restaurants_cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   text-align: center;
   width: 700px;
   margin: 0% auto;
 }
-
 @media all and (max-width: 900px) {
   .restaurants_cards {
     margin: 0;
     width: auto;
   }
 }
-
 @media all and (max-width: 800px) {
   .restaurants_cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 .restaurants_titre {
   font-family: Roboto;
   font-size: 1.3em;
@@ -504,7 +370,6 @@
   width: 700px;
   margin: 0px auto;
 }
-
 @media all and (max-width: 900px) {
   .restaurants_titre {
     margin: 0;
@@ -515,104 +380,78 @@
 .card {
   background-color: white;
   width: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   margin: 20px 0px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  transform: scale(1);
+  flex-direction: column;
   border-radius: 15px 15px 15px 15px;
 }
-
 @media all and (max-width: 800px) {
   .card {
     width: auto;
   }
 }
-
 .card img {
   border-radius: 15px 15px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  object-fit: cover;
+  object-position: center bottom;
   width: 100%;
   height: 200px;
 }
-
 @media all and (max-width: 800px) {
   .card img {
     height: 380px;
   }
 }
-
 @media all and (max-width: 700px) {
   .card img {
     height: 320px;
   }
 }
-
 @media all and (max-width: 600px) {
   .card img {
     height: 250px;
   }
 }
-
 @media all and (max-width: 500px) {
   .card img {
     height: 210px;
   }
 }
-
 @media all and (max-width: 425px) {
   .card img {
     height: 180px;
   }
 }
-
 @media all and (max-width: 375px) {
   .card img {
     height: 150px;
   }
 }
-
 .card #Charonne {
-  -o-object-position: center 61%;
-     object-position: center 61%;
+  object-position: center 61%;
 }
-
 .card_texte {
   text-align: start;
   padding: 10px;
   background-color: white;
   border-radius: 0px 0px 15px 15px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
-
 .card_texte h3 {
   font-size: 1em;
   font-weight: 900;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
-
 .card_texte p {
   font-size: 0.95em;
   padding: 3px 0px 5px 0px;
   opacity: 0.9;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
-
 .card_étiquette {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   position: absolute;
   top: 10px;
   right: 15px;
@@ -623,7 +462,6 @@
   font-size: 0.7em;
   border-radius: 3px;
 }
-
 .card .far {
   position: absolute;
   font-size: 1.4em;
@@ -631,35 +469,25 @@
   bottom: 25px;
   padding-left: 1px;
 }
-
 .card .fas {
   position: absolute;
   font-size: 1.4em;
   right: 10px;
   bottom: 25px;
   padding-left: 1px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 400ms;
+  transform: scale(0);
   transition: all 400ms;
 }
-
 .card .lien-coeur:hover > .fas {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
 .card .lien-coeur:hover > .far {
-  -webkit-animation-name: coeur;
-          animation-name: coeur;
-  -webkit-animation-delay: 270ms;
-          animation-delay: 270ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: coeur;
+  animation-delay: 270ms;
+  animation-fill-mode: forwards;
 }
 
 .spinner {
@@ -669,22 +497,16 @@
   z-index: 4;
   height: 100%;
   width: 100%;
-  -webkit-animation-name: background-spin;
-          animation-name: background-spin;
-  -webkit-animation-duration: 4.5s;
-          animation-duration: 4.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation-name: background-spin;
+  animation-duration: 4.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
   visibility: hidden;
 }
-
 .spinner::after {
   content: "";
   position: absolute;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
   top: 48%;
   right: 48%;
   height: 50px;
@@ -693,27 +515,21 @@
   border-radius: 50%;
   border-top-color: white;
   border-bottom: 3px solid white;
-  -webkit-animation-name: spin;
-          animation-name: spin;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
+  animation-name: spin;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
 }
 
 .header {
   position: relative;
   background-color: white;
 }
-
 .header_btn-retour {
   position: absolute;
   top: 22px;
   left: 22px;
 }
-
 .header .fa-arrow-left {
   font-size: 1.4em;
 }
@@ -721,8 +537,7 @@
 .arrière_plan {
   height: 200px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .carte {
@@ -736,72 +551,51 @@
   border-radius: 40px 40px 0px 0px;
   padding: 20px;
 }
-
 .menu_titre {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
 }
-
 .menu_titre--h1 {
   padding: 0px 10px;
   font-size: 1.4em;
   font-weight: 400;
 }
-
 .menu .fa-heart {
   font-size: 1.4em;
   position: absolute;
   top: 27px;
   right: 25px;
   padding-left: 1px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform  300ms;
-  transition: -webkit-transform  300ms;
-  transition: transform  300ms;
-  transition: transform  300ms, -webkit-transform  300ms;
+  transform: scale(0);
+  transition: transform 300ms;
 }
-
 .menu .far {
   font-size: 1.4em;
   position: absolute;
   top: 27px;
   right: 25px;
   padding-left: 1px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
+  transform: scale(1);
   background: linear-gradient(to bottom, #000000, #000000);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-transition: all  300ms 500ms;
-  transition: all  300ms 500ms;
+  transition: all 300ms 500ms;
 }
-
 .menu .lien-coeur:hover > .fa-heart {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
 .menu .lien-coeur:hover > .far {
-  -webkit-animation-name: coeur;
-          animation-name: coeur;
-  -webkit-animation-delay: 270ms;
-          animation-delay: 270ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: coeur;
+  animation-delay: 270ms;
+  animation-fill-mode: forwards;
 }
 
 .box {
   padding: 20px 0px;
 }
-
 .box_titre {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   font-family: Roboto;
@@ -811,92 +605,62 @@
   text-transform: uppercase;
   padding: 0px 10px;
 }
-
 .box_titre:after {
-  content: '';
+  content: "";
   height: 2px;
   width: 35px;
   position: absolute;
   bottom: -5px;
   background-color: #99e2d0;
 }
-
 .box_conteneur {
   margin: 20px 0px;
 }
-
 .box_conteneur--1 {
-  -webkit-animation-name: cards;
-          animation-name: cards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-name: cards;
+  animation-duration: 2s;
+  animation-delay: 300ms;
+  animation-fill-mode: both;
 }
-
 .box_conteneur--2 {
-  -webkit-animation-name: cards;
-          animation-name: cards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-name: cards;
+  animation-duration: 2s;
+  animation-delay: 600ms;
+  animation-fill-mode: both;
 }
-
 .box_conteneur--3 {
-  -webkit-animation-name: cards;
-          animation-name: cards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-name: cards;
+  animation-duration: 2s;
+  animation-delay: 800ms;
+  animation-fill-mode: both;
 }
-
 .box_conteneur--4 {
-  -webkit-animation-name: cards;
-          animation-name: cards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-name: cards;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
 .conteneur {
   font-family: Roboto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   background-color: white;
   border-radius: 14px;
-  -webkit-box-shadow: 0px 3px 5px #80808047;
-          box-shadow: 0px 3px 5px #80808047;
+  box-shadow: 0px 3px 5px #80808047;
   overflow: hidden;
   cursor: pointer;
 }
-
 .conteneur:hover > .conteneur_items > .conteneur_items--check {
   margin-right: 0em;
 }
-
 .conteneur:hover > .conteneur_items > .conteneur_items--check > .fa-check-circle {
-  -webkit-transform: rotate(0turn);
-          transform: rotate(0turn);
+  transform: rotate(0turn);
 }
-
 .conteneur_description {
   padding: 10px 0px 10px 10px;
   overflow: hidden;
 }
-
 .conteneur_description--titre {
   font-size: 1.2em;
   margin-bottom: 5px;
@@ -904,61 +668,41 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .conteneur_description--texte {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .conteneur_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
 }
-
 .conteneur_items--prix {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   padding-bottom: 10px;
   font-weight: 900;
 }
-
 .conteneur_items--check {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   min-width: 60px;
   margin-left: 20px;
   background-color: #99e2d0;
   border-radius: 0px 13px 13px 0px;
   margin-right: -4em;
-  -webkit-transition: all 500ms;
   transition: all 500ms;
   cursor: pointer;
 }
-
 .conteneur .fa-check-circle {
   font-size: 1.3em;
-  -webkit-transform: rotate(-1turn);
-          transform: rotate(-1turn);
-  -webkit-transition: all 500ms 100ms;
+  transform: rotate(-1turn);
   transition: all 500ms 100ms;
 }
-
 .conteneur .fa-check-circle::before {
   color: white;
 }
+
 /*# sourceMappingURL=main.css.map */
